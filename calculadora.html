@@ -6,23 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora Financeira</title>
-  <style>
-    body {
-      background-image: url(../PI/Design_sem_nome.png);
-      background-size: cover;
-      padding: 0;
-      margin: 0;
-    }
-
-    #fundo {
-      background-color: #00000054;
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-
-    }
-  </style>
+<link rel="stylesheet" href="calculadora.css">
 </head>
 
 <body>
@@ -32,28 +16,33 @@
   
 
   <div style="margin-top: -5%;">
-    <div style="color:#fffdd0e1; text-align: center; margin-top: 50px; font-size: 40px;"> <br> <br>
-      <b> Calcule seu investimento! </b>
+    <div class="div_1"> <br> <br>
+    <b> Calcule seu investimento! </b>
     </div>
     <br> 
     <br>
+    <div class="div_input">
+      
+    <input id="ColheitaIdeal" class="input1" placeholder="Quantidade da colheita total Kg">
+    
+    <br>
 
-    <div> <input id="ColheitaIdeal" placeholder="Quantidade da colheita total"
-        style="background-color: #F4fdff; font-size: 25px ; margin-left: 38%"><span style="color: white;">Kg </span></div> <br>
+    <input id="Perda" class="input2" placeholder="Quantidade de perda Kg">
+    
+    <br>
 
-    <div> <input id="Perda" placeholder="Quantidade de perda"
-        style="background-color: #F4fdff; font-size: 25px; margin-left: 38%" /><span style="color: white;">Kg </span></div> <br>
+    <input id="Valor" class="input3" placeholder="Valor do Kg em R$">  <br>
 
-    <div> <input id="Valor" placeholder="Valor do Kg em R$"
-        style="background-color: #F4fdff; font-size: 25px; margin-left: 38%;" /></div> <br>
-
-
-    <button style="margin-left: 44%; font-size: 18px; margin-bottom: 1%; background-color: #AACBD4;" ; onclick="calcular()"> Calcular Valores
+     
+    </div>
+<br>
+<div id="div1" class="result"></div> <br>
+    <button class="botao1" ; onclick="calcular()"> Calcular Valores
     </button>
-    <button onclick="Recomeço()" style="font-size: 18px; margin-left: 45%; background-color: peru;"> Nova Análise </button>
+    <button class="botao2" onclick="Recomeço()"> Nova Análise </button>
     <br>
     <br>
-    <div id=div1 style="color: #252525; font-size:x-large; height: 20%; margin-left: 28%;"></div>
+    <div id=div2 ></div>
   </div>
 
 </body>
@@ -83,15 +72,16 @@
     div1.style.width = "45%";
     div1.style.borderStyle = "solid";
     div1.style.borderWidth = "3px";
-    div1.style.borderColor = "#AACBD4";
-    div1.style.borderRadius = "15px";
-    div1.style.display = "block"
+    div1.style.borderColor = "peru";
+    div1.style.borderRadius = "5px";
+    div1.style.display = "block";
+    div1.style.paddingStart = "10px";
 
 
   }
   function Recomeço() {
 
-    div1.innerHTML = " "
+    div1.innerHTML = ""
     ColheitaIdeal.value = ""
     Perda.value = ""
     Valor.value = ""
