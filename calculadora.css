@@ -73,6 +73,7 @@ body {
     border-radius: 6px;
     width: 200px;
     height: 30px;
+    outline: 0;
 
 }
  .input3{
@@ -80,6 +81,8 @@ body {
     border-radius: 6px;
     width: 200px;
     height: 30px;
+    outline: 0;
  }
 
-
+ 
+ }
